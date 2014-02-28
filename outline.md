@@ -37,6 +37,10 @@ My main passion is web development, and I use Python for that as well. My last "
 
 This workshop assumes that you have a bit of experience working with another programming language, such as C or Java. If you don't, you may have some difficulty keeping up.
 
+### Workshop Material
+
+The workshop material is open-source (yay!) and has its own [Github repo](https://github.com/Cyph0n/python-workshop-2014). You can get everything from there.
+
 # Section 0. Setting Up the Environment
 
 ## 1. Installing Anaconda
