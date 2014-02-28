@@ -22,17 +22,27 @@ To download Anaconda, visit its [Downloads](http://continuum.io/downloads) page.
 
 To verify that Python was installed correctly, type `python --version` in the command prompt on Windows or the terminal on OS X/Linux. If you don't get an error, you're good to go.
 
+![Python is installed correctly.](images/1.png)
+
 ## 2. Creating a Directory
 
 Create a directory for the workshop. We'll be saving our work in this directory. An example could be `py-workshop` on the Desktop. Navigate to this directory using your prompt's `cd` command before proceeding.
 
-## 3. The IPython Interpreter
+![Creating a directory in OS X.](images/2.png)
 
-IPython is a special version of Python that adds a good amount of useful features to the Python interpreter. In addition, it comes with a Notebook version that allows you to interactively run your code in a web browser. Since Python is a dynamic language, you do not need to compile your code - simply type the code in a block and hit `Enter` to view the results live.
+## 3. The IPython Notebook
 
-Type `ipython notebook` in your Terminal. This will start up the IPython notebook interface through your default web browser. Create a new notebook. It will be saved in the current directory.
+IPython is a special version of Python that adds a good amount of useful features to the Python interpreter. In addition, it comes with a Notebook version that allows you to interactively run your code in a web browser. Since Python is a dynamic language, you do not need to compile your code - simply type the code in a block and hit `Shift-Enter` to view the results of the execution instantly.
 
-IPython also allows you to include images, text, and video along with your code. More details can be found in the IPython [documentation](http://ipython.org/ipython-doc/stable/interactive/notebook.html).
+IPython also allows you to include images, text, LaTeX-formatted equations, and even video along with your code in the same notebook. More details can be found in the IPython [documentation](http://ipython.org/ipython-doc/stable/interactive/notebook.html).
+
+Type `ipython notebook` in your Terminal. This will start up the IPython Notebook dashboard through your default web browser. Create a new notebook. It will be saved in the current directory.
+
+![Running the IPython Notebook server.](images/3.png)
+
+![The IPython Notebook dashboard.](images/4.png)
+
+![A new notebook.](images/5.png)
 
 \newpage
 
@@ -128,6 +138,8 @@ for line in f:
 	print line
 
 lines = f.readlines() # List of lines
+
+f.close()
 ```
 
 # Section 4. Imports and The Standard Library
@@ -211,7 +223,7 @@ import urllib2
 
 def get_html(url):
 	# Get the page's contents
-	response = urllib2.urlopen(url)
+	response = urllib2.urlopen('http://' + url)
 
 	# Get the body of the page (HTML)
 	text = response.read()
@@ -226,7 +238,7 @@ import urllib2
 
 def get_html(url):
 	# Get the page's contents
-	response = urllib2.urlopen(url)
+	response = urllib2.urlopen('http://' + url)
 
 	# Get the body of the page (HTML)
 	text = response.read()
@@ -234,15 +246,15 @@ def get_html(url):
 	return text
 
 # Prompts
-url = raw_input('Enter a valid URL: ')
+url = raw_input('Enter a valid URL (no http): ')
 path = raw_input('Enter a path (with trailing slash): ')
 full_path = path + 'page.html'
 
 # Create the file
-f = open(full_path, w)
+f = open(full_path, 'w')
 
 # Get the webpage's contents as text (not implemented)
-page = get_page(url)
+page = get_html(url)
 
 # Save the file
 f.write(page)
@@ -252,6 +264,12 @@ f.close()
 print 'Done! File at: %s' % full_path
 ```
 
-How about we save the code into its own Python script? Follow the steps mentioned in the previous section to create a new Python file and then copy and paste the code into that file. Assume we named the file `save_page.py`.
+How about we save the code into its own Python script? Follow the steps mentioned in the previous section to create a new Python script and then copy and paste the code into it.
 
-To run it, in the ommand prompt (or terminal), type `python save_page.py`. You should be able to type the URL and path in the prompt and then see the result.
+Assume we named the script `save_page.py`. To run it, in the command prompt (or terminal), type `python save_page.py`. You should be able to type the URL and path in the prompt and then see the result.
+
+![The script running in the terminal.](images/6.png)
+
+\newpage
+
+\listoffigures
