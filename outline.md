@@ -8,6 +8,22 @@
 
 # Introduction
 
+## The Workshop
+
+### Target Audience
+
+This workshop assumes that you have a bit of experience working with another programming language, such as C or Java. If you don't, you may have some difficulty keeping up.
+
+### Workshop Material
+
+The workshop material is open-source (yay!) and has its own [Github repoository](https://github.com/Cyph0n/python-workshop-2014). Visit the repo's [Releases page](https://github.com/Cyph0n/python-workshop-2014/releases) to download the latest release of the material as a `.zip` file.
+
+### About Me
+
+My name is Assil Taoufik Ksiksi. I'm a 3rd year UAEU student currently pursuing a degree in Electrical Engineering. I taught myself programming 4 years ago, starting with C/C++, and have been writing Python for the past 2 years. I think of myself as an intermediate Python developer.
+
+My main passion is web development, and I use Python for that as well. My last "cool" project was a course scheduling web application for UAEU students called [Jadawil](http://jadawil.co.nr/). It is still being updated every semester, but I probably won't be adding any new features. The web app is written in [Flask](http://flask.pocoo.org/), a web microframework for Python.
+
 ## What is Python?
 
 "Python is a widely used general-purpose, high-level programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than would be possible in languages such as C. The language provides constructs intended to enable clear programs on both a small and large scale.
@@ -24,22 +40,6 @@ Python supports multiple programming paradigms, including object-oriented, imper
 * Multiple paradigms
 * Dynamic type system
 * General purpose (scientific, web development, mobile app dev, etc.)
-
-## The Workshop
-
-### About Me
-
-My name is Assil Taoufik Ksiksi, and I'm a 3rd year UAEU student pursuing a degree in Electrical Engineering. I taught myself programming 4 years ago, starting with C/C++, and have been writing Python for the past 2 years. I think of myself as an intermediate Python developer.
-
-My main passion is web development, and I use Python for that as well. My last "cool" project was a course scheduling web application for UAEU students called [Jadawil](http://jadawil.co.nr/). It is still being updated every semester, but I probably won't be adding any new features. The web app is written in [Flask](http://flask.pocoo.org/), a web microframework for Python.
-
-### Target Audience
-
-This workshop assumes that you have a bit of experience working with another programming language, such as C or Java. If you don't, you may have some difficulty keeping up.
-
-### Workshop Material
-
-The workshop material is open-source (yay!) and has its own [Github repo](https://github.com/Cyph0n/python-workshop-2014). You can get everything from there.
 
 # Section 0. Setting Up the Environment
 
@@ -79,6 +79,8 @@ Create a new notebook. It will be saved in the current working directory.
 
 # Section 1. Variables, Types, and User Input
 
+## Variables and Types
+
 Unlike in C or Java, variables in Python are not declared beforehand. This is due to dynamic typing, or "duck" typing. That means that the interpreter determines the type at runtime. However, there are types, and the main ones are `int`, `float`, `string`, `list`, and `dict`. Since Python is an object-oriented language, the types are all objects, similar to Java.
 
 The following is some simple code that demonstrates the manipulation of variables of different types. Try to predict the output of each `print` statement before running anything. Note that string formatting in Python uses C's format specifier system.
@@ -98,6 +100,8 @@ print c + ' ' + c
 print d
 print e[1], e[-1]
 ```
+
+## User Input
 
 In Python, taking user input is extremely simple thanks to the `raw_input` function. The function takes an optional message to display to the user and returns the entered value as a `string`. To get a number, you'll need to convert the input from `string` to `int` or `float`.
 
@@ -179,7 +183,7 @@ while condition:
 
 ## Functions
 
-Due to the dynamic typing system, functions do not need a return type or types for their argument(s). This makes writing functions much easier, since you do not have to worry about types. This can be bad in some cases, but we'll leave that for another time.
+Due to the dynamic typing system, functions do not need a return type or types for their argument(s). This makes writing functions much easier, since you do not have to worry about types. Unfortunately, that's not always a good thing, but we'll leave that for another time.
 
 ```python
 # Print something
@@ -279,7 +283,7 @@ q = math.pow(pi, 2)
 print n, p, q
 ```
 
-# Section 5. Project
+# Project: Webpage Downloader
 
 The project combines everything covered above to create a relatively useful Python application. This application will do the following:
 
@@ -417,7 +421,7 @@ print message
 
 How about we save the code into its own Python script? Follow the steps mentioned in the previous section to create a new Python script and then copy and paste the code into it.
 
-Assume we named the script `save_page.py`. To run it, in the command prompt (or terminal), type `python save_page.py`. You should be able to type the URL and path in the prompt and then see the result.
+Assume we named the script `webpage_dl.py`. To run it, in the command prompt (or terminal), type `python webpage_dl.py`. You should be able to type the URL and path in the prompt and then see the output.
 
 ## Exercise 2: Take Multiple URLs From the User
 
