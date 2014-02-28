@@ -18,11 +18,17 @@ This workshop assumes that you have a bit of experience working with another pro
 
 The workshop material is open-source (yay!) and has its own [Github repoository](https://github.com/Cyph0n/python-workshop-2014). Visit the repo's [Releases page](https://github.com/Cyph0n/python-workshop-2014/releases) to download the latest release of the material as a `.zip` file.
 
-### About Me
+### About the Presenter
 
-My name is Assil Taoufik Ksiksi. I'm a 3rd year UAEU student currently pursuing a degree in Electrical Engineering. I taught myself programming 4 years ago, starting with C/C++, and have been writing Python for the past 2 years. I think of myself as an intermediate Python developer.
+His name is Assil Taoufik Ksiksi, and he's a 3rd year UAEU student currently pursuing a degree in Electrical Engineering. He taught himself programming 4 years ago, starting with C/C++, and has been writing Python for the past 2 years. He likes to refer to himself as an intermediate Python developer.
 
-My main passion is web development, and I use Python for that as well. My last "cool" project was a course scheduling web application for UAEU students called [Jadawil](http://jadawil.co.nr/). It is still being updated every semester, but I probably won't be adding any new features. The web app is written in [Flask](http://flask.pocoo.org/), a web microframework for Python.
+His main passion is web development, and he uses Python for that as well. His last "cool" project was a course scheduling web application for UAEU students called [Jadawil](http://jadawil.co.nr/). He still updates it at the end of every semester, but he probably won't be adding any new features. The web app is written in [Flask](http://flask.pocoo.org/), a web microframework for Python.
+
+### The Workshop's Timing
+
+Believe it or not, but the most suitable time for the workshop was found using real UAEU course data and Python. Simply put, the code ranked the time slots of UAEU courses from least conflicts to most conflicts. In other words, it determined how many times each time slot overlapped with the rest.
+
+You can find the IPython notebook [here](http://nbviewer.ipython.org/gist/Cyph0n/9280508).
 
 ## What is Python?
 
@@ -59,7 +65,7 @@ Create a directory for the workshop. We'll be saving our work in this directory.
 
 ![Creating a directory in OS X.](images/2.png)
 
-## 3. The `IPython` Notebook
+## 3. The `IPython` Notebook Interface
 
 `IPython` is a special version of Python that adds a good amount of useful features to the Python interpreter. In addition, it comes with a Notebook version that allows you to interactively run your code in a web browser. Since Python is a dynamic language, you do not need to compile your code - simply type the code in a block and hit `Shift-Enter` to view the results of the execution instantly.
 
