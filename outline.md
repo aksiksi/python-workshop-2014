@@ -2,6 +2,8 @@
 % Prepared by Assil Taoufik Ksiksi
 % March 2014
 
+![](images/python.png)
+
 \newpage
 \tableofcontents
 \newpage
@@ -23,11 +25,11 @@ Woah. What an earful. How about we break down the above summary into its key poi
 	* Scientific computing
 	* Game development
 	* Mobile app development
+	* Data science and machine learning
 	* Scripting and automation
 	* Visualization
 	* Networking
 	* Concurrent applications
-
 * **High-level** - This means that Python is (literally) a level above the "high-level" languages, such as C.
 * **Code readability** - Python code is generally pleasureable to look at due to its whitespace-based indentation.
 * **Multiple programming paradigms** - In other words, versatility. For comparison, C is a purely imperative language i.e. instructions are defined sequentially.
@@ -96,7 +98,7 @@ Create a new notebook. It will be saved in the current working directory.
 
 ## Variables and Types
 
-Unlike in C or Java, variables in Python are not declared beforehand. This is due to dynamic typing, or "duck" typing. That means that the interpreter determines the type at runtime. However, there are types, and the main ones are `int`, `float`, `string`, `list`, and `dict`. There is no `char` type - you can use a `string` instead.
+Unlike in C or Java, variables in Python are not declared beforehand. This is due to dynamic typing, which basically means that the interpreter determines the type of a variable at runtime. Of course, there are types, and the main ones are `int`, `float`, `string`, `list`, 'bool', and `dict`. There is no `char` type - you can use a `string` instead.
 
 The following is some simple code that demonstrates the manipulation of variables of different types. Try to predict the output of each `print` statement before running anything. Notice that string formatting in Python uses C's format specifier system.
 
