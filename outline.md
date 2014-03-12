@@ -16,7 +16,7 @@
 
 Python supports multiple programming paradigms, including object-oriented, imperative and functional programming or procedural styles. It features a dynamic type system and automatic memory management and has a large and comprehensive standard library."[^1]
 
-[^1]: Python (programming language) - [http://en.wikipedia.org/wiki/Python_%28programming_language%29](http://en.wikipedia.org/wiki/Python_%28programming_language%29)
+[^1]: Python (programming language) - [https://en.wikipedia.org/wiki/Python_%28programming_language%29](http://en.wikipedia.org/wiki/Python_%28programming_language%29)
 
 Woah. What an earful. How about we break down the above summary into its key points?
 
@@ -44,7 +44,9 @@ This workshop assumes that you have a bit of experience working with another pro
 
 ### Workshop Material
 
-The workshop material is open-source (yay!) and has its own [Github repoository](https://github.com/Cyph0n/python-workshop-2014). Visit the repo's [Releases page](https://github.com/Cyph0n/python-workshop-2014/releases) to download the latest release of the material as a `.zip` file.
+The workshop material is open-source (yay!) and has its own [repository](https://github.com/Cyph0n/python-workshop-2014) on Github[^2]. You can use [this](https://github.com/Cyph0n/python-workshop-2014/archive/master.zip) link to grab the latest version of the outline PDF as a `.zip` file.
+
+[^2]: Github on Wikipedia - [https://en.wikipedia.org/wiki/GitHub](https://en.wikipedia.org/wiki/GitHub)
 
 ### About the Presenter
 
