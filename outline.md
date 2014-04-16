@@ -30,7 +30,7 @@ Woah. What an earful. How about we break down the above summary into its key poi
 	* Visualization
 	* Networking
 	* Concurrent applications
-* **High-level** - This means that Python is (literally) a level above the "high-level" languages, such as C.
+* **High-level** - This means that Python is (literally) a level above the "low-level" languages, such as C.
 * **Code readability** - Python code is generally pleasureable to look at due to its whitespace-based indentation.
 * **Multiple programming paradigms** - In other words, versatility. For comparison, C is a purely imperative language i.e. instructions are defined sequentially.
 * **Dynamic type system** - Simply put, in Python, you do not need to declare variables or specify their types before using them.
@@ -50,6 +50,10 @@ OK, so Python is a cool language, but where is it really used? Below is a list o
 * [Civilization IV](http://en.wikipedia.org/wiki/Civilization_IV) - Used Python for its AI engine.
 * [EVE Online](http://www.eveonline.com/) - The server code for EVE is written in a modified Python language called [Stackless Python](http://www.stackless.com/).
 * [Blender 3D](http://www.blender.org/) - Python is the language used for extending Blender.
+
+## Note: Python 2 vs. Python 3
+
+Python 3 was released in 2008. The goal behind it was to fix some fundamental flaws with the Python language. The problem, however, was that these changes could not be backwards compatible. The community was fragmented as a result. To this day, many people still use Python 2. In this workshop, I'll be uisng Python 3, since it is the future of Python.
 
 ## The Workshop
 
@@ -71,17 +75,17 @@ His main passion is web development, and he uses Python for that as well. His la
 
 ### The Workshop's Timing
 
-Believe it or not, but the most suitable time for the workshop was found using real UAEU course data and Python. Simply put, the code ranked the time slots of UAEU courses from least conflicts to most conflicts. In other words, it determined how many times each time slot overlapped with the rest.
+Believe it or not, but the most suitable time for the workshop was found using real UAEU course data and Python. The code ranked the time slots of UAEU courses from least conflicts to most conflicts. In other words, it determined how many times each time slot overlapped with the rest.
 
 You can find the IPython notebook [here](http://nbviewer.ipython.org/gist/Cyph0n/9280508).
 
 # Section 0. Setting Up the Environment
 
-## 1. Installing Anaconda
+## 1. Installing Miniconda
 
-Anaconda is a custom installer for Python that includes the most used Python libraries. It is available for all major operating systems and works pretty much the same across them all, making troubleshooting less of a problem.
+Miniconda is a custom installer for Python that simplifies the installation of Python libraries. It is available for all major operating systems and works pretty much the same across them all, making troubleshooting less of a problem.
 
-To download Anaconda, visit its [Downloads](http://continuum.io/downloads) page. Scroll down a bit to see links to the installers. The installation process is quite straightforward. Do not change any of the options during the installation, except perhaps the installation directory.
+To download Miniconda, visit its [Downloads](http://conda.pydata.org/miniconda.html#miniconda) page. Select the version corresponding to your operating system. The installation process is quite straightforward. Do not change any of the options during the installation, except perhaps the installation directory.
 
 To verify that Python was installed correctly, type `python --version` in the command prompt on Windows or the terminal on OS X/Linux. If you don't get an error, you're good to go.
 
@@ -91,7 +95,8 @@ To verify that Python was installed correctly, type `python --version` in the co
 
 Create a directory for the workshop. We'll be saving our work in this directory. An example could be `py-workshop` on the Desktop. Navigate to this directory using your prompt's `cd` command before proceeding.
 
-![Creating a directory in OS X.](images/2.png)
+![Creating a directory in Windows.](images/2.png)
+![Creating a directory in OS X.](images/2-osx.png)
 
 ## 3. The `IPython` Notebook Interface
 
@@ -99,15 +104,26 @@ Create a directory for the workshop. We'll be saving our work in this directory.
 
 `IPython` also allows you to include images, text, LaTeX-formatted equations, and even video along with your code *in the same notebook*. More details can be found in the `IPython` [documentation](http://ipython.org/ipython-doc/stable/interactive/notebook.html).
 
-To start up the `IPython` Notebook server, type `ipython notebook` in your terminal. This will automatically open the `IPython` Notebook dashboard page in your default web browser. To stop the server, hit `Ctrl-C`.
+First, you'll need to install `IPython` in Miniconda. To do this, you can use the built-in `conda` command line package installer.
+
+1. Open a Command Prompt and type `conda install ipython pyzmq jinja2 tornado`. These are the Python packages needed to run `IPython` correctly.
+
+![Installing `IPython` using `conda`](images/3.png)
+
+2. Type `y` and hit `Enter` when asked to proceed.
+3. Wait for everything to finish installing.
+
+To start up an instance of the `IPython` Notebook server, type `ipython notebook` in your terminal. This will automatically open the `IPython` Notebook dashboard page in your default web browser. To stop the server, hit `Ctrl-C`.
 
 Create a new notebook. It will be saved in the current working directory.
 
-![Running the `IPython` Notebook server.](images/3.png)
+\newpage
 
-![The `IPython` Notebook dashboard.](images/4.png)
+![Running the `IPython` Notebook server.](images/4.png)
 
-![A new notebook.](images/5.png)
+![The `IPython` Notebook dashboard.](images/5.png)
+
+![A new notebook.](images/6.png)
 
 \newpage
 
@@ -128,25 +144,25 @@ d = True
 e = [1, 5.0, False, 'orange']
 
 # Simple operations and access
-print (a + 10) ** 2
-print 'Value = %f' % (b * a)
-print c + ' ' + c
-print d
-print e[1], e[-1]
+print((a + 10) ** 2)
+print('Value = %f' % (b * a))
+print(c + ' ' + c)
+print(d)
+print(e[1], e[-1])
 ```
 
 ## User Input
 
-In Python, taking user input is extremely simple thanks to the `raw_input` function. The function takes an optional message to display to the user and returns the entered value as a `string`. To get a number, you'll need to convert the input from `string` to `int` or `float`.
+In Python, taking user input is extremely simple thanks to the `input` function. The function takes an optional message to display to the user and returns the entered value as a `string`. To get a number, you'll need to convert the input from `string` to `int` or `float`.
 
 ```python
 # Take user input
-name = raw_input('Enter your name: ')
-print 'Hello, %s!' % name
+name = input('Enter your name: ')
+print('Hello, %s!' % name)
 
 # Type conversion in action
-num = int(raw_input())
-print 'You entered %d.' % num
+num = int(input()) # Must input an integer!
+print('You entered %d.' % num)
 ```
 
 \newpage
@@ -162,15 +178,15 @@ The syntax for the `if` statement is very similar to its syntax in C. The only d
 ```python
 # Simple if-elif-else block
 if a < 5:
-	print 'Less.'
-	print 'Still here.'
+    print('Less.')
+    print('Still here.')
 elif a == 5:
-	print 'Equal.'
-	
-	if a != 5:
-		print 'Impossible, right?'
+    print('Equal.')
+
+    if a != 5:
+        print('Impossible, right?')
 else:
-	print 'Greater.'
+    print('Greater.')
 ```
 
 ## The `for` Loop
@@ -191,7 +207,7 @@ for item in e:
 m = 10
 
 for i in range(1, m+1):
-	print i
+	print(i)
 ```
 
 ## The `while` Loop
@@ -208,7 +224,7 @@ while condition:
 		condition = False
 		continue
 	
-	print 'Iteration: %d' % i
+	print('Iteration: %d' % i)
 	
 	i += 1
 ```
@@ -222,7 +238,7 @@ Due to the dynamic type system, functions do not need a return type or types for
 ```python
 # Print something
 def printer():
-	print 'Something?'
+	print('Something?')
 
 # Add two numbers
 def add(x, y):
@@ -241,9 +257,9 @@ s = add(10, 20)
 t = greeting()
 u = greeting('Assil')
 
-print s
-print t
-print u
+print(s)
+print(t)
+print(u)
 ```
 
 ## File Input and Output
@@ -264,25 +280,18 @@ f.close()
 # Open above file for reading
 f = open('nums.txt')
 
-# Two ways to get contents of file
-
-## Iterate over its lines
+# Iterate over its lines
 for line in f:
-	print line
-
-## Get the list of lines (includes `\n`)
-lines = f.readlines()
+    print(line.strip('\n')) # Strip off newline before printing
 
 f.close()
 ```
 
 # Section 4. Imports and The Standard Library
 
-For this part, you'll need to create a Python script. On Unix, simply type `touch test.py` in the terminal. 
+For this part, you'll need to create a Python script. On Unix, simply type `touch test.py` in the terminal. On Windows, type `echo "" > test.py` in the command prompt.
 
-On Windows, you'll need to create a new file using Windows Explorer. Open the `py-workshop` folder in Explorer, right-click, and navigate to `New > Text Document`. Rename the new document to `test.py`. Make sure the extension is not `.txt`.
-
-Type the following into `test.py`:
+Open `test.py` in any text editor, and type the following into it:
 
 ```python
 def add(x, y):
@@ -308,13 +317,13 @@ import test
 a = test.a
 b = test.b
 
-print a, b
+print(a, b)
 
-n = test.add(a, b)
-p = math.sqrt(n)
+n = test.add(a, a*2)
+p = math.sqrt(a)
 q = math.pow(pi, 2)
 
-print n, p, q
+print(n, p, q)
 ```
 
 # Project: Webpage Downloader
@@ -358,15 +367,15 @@ Before writing any code, let's write comments to define the layout of our script
 
 Let's start filling in the code for each comment, starting with the prompts. Keep the `get_html` function definition until the end.
 
-For the prompts, we need the user to enter two things: the URL and the filename. That means two variables and two `raw_input` calls. Since this is a simple application, we'll leave the error handling to the user by including the input specification in the prompts.
+For the prompts, we need the user to enter two things: the URL and the filename. That means two variables and two `input` calls. Since this is a simple application, we'll leave the error handling to the user by including the input specification in the prompts.
 
 ```python
 # Prompts for the user: URL and filename
-url = raw_input('Enter a URL (without http://): ')
-filename = raw_input('Enter a filename: ')
+url = input('Enter a URL (without http://): ')
+filename = input('Enter a filename (no spaces): ')
 ```
 
-Next, we add the folder name (`downloads` in this case), the filename, and the `.html` extension to get the full path.
+Next, we add the folder name (`downloads` in this case), the filename, and the `.html` extension to get the full path. We can do this because all three values are of type `string`.
 
 ```python
 # full_path = folder_name + filename + file_extension
@@ -396,24 +405,24 @@ f.close()
 
 # Tell the user the file has been saved and print the file's path
 message = 'Done! File saved at: %s' % full_path
-print message
+print(message)
 ```
 
-Lastly, we need to implement `get_html`. To do that, we'll use a library included with Python called `urllib2`. `urllib2` contains objects and functions that allow you to work with URLs. To use it in our code, we'll have to import it first.
+Lastly, we need to implement `get_html`. To do that, we'll use a library included with Python called `urllib`. `urllib` contains objects and functions that allow you to work with URLs. To use it in our code, we'll have to import it first.
 
-For our task, we'll be using a function called `urlopen`. It takes a URL as input, and returns a file-like object. Since `urlopen` needs a URL that starts with `http://`, we'll append it to the start of the URL. Finally, we'll invoke the `read` method of the object to get the page's HTML content as a `string` and return it.
+For our task, we'll be using a function called `urlopen` from the `request` subpackage. It takes a URL as input, and returns a file-like object. Since `urlopen` needs a URL that starts with `http://`, we'll append it to the start of the URL. Finally, we'll invoke the `read` method of the object to get the page's HTML content as a `string` and return it.
 
 \newpage
 
 ```python
-import urllib2
+import urllib
 
 def get_html(url):
 	# Get the page's reponse
-	response = urllib2.urlopen('http://' + url)
+	response = urllib.request.urlopen('http://' + url)
 
-	# Get the body of the page (HTML)
-	text = response.read()
+	# Get the body of the page (HTML) as a `string`
+	text = str(response.read())
 	
 	return text
 ```
@@ -421,21 +430,21 @@ def get_html(url):
 The final result is shown below. The function does not have to be located at the top - this is simply a stylistic choice.
 
 ```python
-import urllib2
+import urllib
 
 # Function: get_html(url) -> given a URL, returns HTML content of page as a string
 def get_html(url):
 	# Get the page's reponse
-	response = urllib2.urlopen('http://' + url)
+	response = urllib.request.urlopen('http://' + url)
 
-	# Get the body of the page (HTML)
-	text = response.read()
+	# Get the body of the page (HTML) as a `string`
+	text = str(response.read())
 	
 	return text
 
 # Prompts for the user: URL and filename
-url = raw_input('Enter a URL (without http://): ')
-filename = raw_input('Enter a filename: ')
+url = input('Enter a URL (without http://): ')
+filename = input('Enter a filename (no spaces): ')
 
 # full_path = folder_name + filename + file_extension
 full_path = 'downloads/' + filename + '.html'
@@ -452,7 +461,7 @@ f.close()
 
 # Tell the user the file has been saved and print the file's path
 message = 'Done! File saved at: %s' % full_path
-print message
+print(message)
 ```
 
 ### Exercise: Create a standalone Python script
@@ -465,9 +474,9 @@ Assume we named the script `webpage_dl.py`. To run it, in the command prompt (or
 
 The problem here is that you'll have to make sure the directory is created beforehand, or else the program will give the user an error.
 
-This can be solved by creating the directory in your code. Visit the `os` module's [page](http://docs.python.org/2/library/os.html) and read up on how to do that.
+This can be solved by creating the directory in your code. Visit the `os` module's [page](http://docs.python.org/3/library/os.html) and read up on how to do that.
 
-### Exercise: Take multiple URLs from the user
+### Exercise: Take multiple URLs and filenames from the user
 
 First, you'll need to somehow display the two prompts multiple times to the user and save the URL and filename each time. Second, you'll need to do the same procedure for each URL-filename pair. **Hint:** you'll need to use loops.
 
