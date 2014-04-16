@@ -36,6 +36,21 @@ Woah. What an earful. How about we break down the above summary into its key poi
 * **Dynamic type system** - Simply put, in Python, you do not need to declare variables or specify their types before using them.
 * **Large standard library** - Almost anything you can think of can be done using the included standard library modules. Everything else can be achieved using external packages.
 
+## Python in the Real World
+
+OK, so Python is a cool language, but where is it really used? Below is a list of known websites and games, both global and from the region, that use Python.
+
+* [Dropbox](http://www.dropbox.com/) - The Dropbox client is written in Python.
+* [Google](http://www.google.com/) - Google uses Python in its search engine stack. The creator of Python used to work there until two years ago.
+* [Disqus](http://www.disqus.com/) - Almost every blog in the world uses Disqus for their comments.
+* [Instagram](http://www.instagram.com/) - Reportedly written in Django, a web framework for Python.
+* [Dubizzle](http://www.dubizzle.com/) - One of the biggest classified ads websites in the Middle East. Built using Django. Uses Python extensively.
+* [Reddit](http://www.reddit.com/) - Written in Python. The website is actually open-source.
+* [The Washington Post](http://www.washingtonpost.com/)
+* [Civilization IV](http://en.wikipedia.org/wiki/Civilization_IV) - Used Python for its AI engine.
+* [EVE Online](http://www.eveonline.com/) - The server code for EVE is written in a modified Python language called [Stackless Python](http://www.stackless.com/).
+* [Blender 3D](http://www.blender.org/) - Python is the language used for extending Blender.
+
 ## The Workshop
 
 ### Target Audience
@@ -100,7 +115,7 @@ Create a new notebook. It will be saved in the current working directory.
 
 ## Variables and Types
 
-Unlike in C or Java, variables in Python are not declared beforehand. This is due to dynamic typing, which basically means that the interpreter determines the type of a variable at runtime. Of course, there are types, and the main ones are `int`, `float`, `string`, `list`, 'bool', and `dict`. There is no `char` type - you can use a `string` instead.
+Unlike in C or Java, variables in Python are not declared beforehand. This is due to dynamic typing, which basically means that the interpreter determines the type of a variable at runtime. Of course, there are types, and the main ones are `int`, `float`, `string`, `list`, `bool`, and `dict`. There is no `char` type - you can use a `string` instead.
 
 The following is some simple code that demonstrates the manipulation of variables of different types. Try to predict the output of each `print` statement before running anything. Notice that string formatting in Python uses C's format specifier system.
 
@@ -490,6 +505,10 @@ Below are the most well-known libraries from a variety of fields.
 * [wxPython](http://www.wxpython.org/) - An API for the wxWidgets GUI development framework.
 
 It would take quite a few pages to actually cover all of the great Python libraries, but I think the above are sufficient to demonstrate the true power and versatility of Python.
+
+# Survey
+
+At the end of the workshop, it would be great if you could take 3 minutes to fill in a simple survey. I'll use the results to see if attendees are interested in another workshop. The survey can be found [here](https://docs.google.com/forms/d/1qGfwbaQHKOg1WYFZPXu8g30lgmi7wfioqVeJkNNJlm0/viewform).
 
 # Contact
 
