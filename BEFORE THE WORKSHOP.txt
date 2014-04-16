@@ -1,0 +1,32 @@
+FOLDER CONTENTS
+---------------
+
+This folder contains the slides and the outline I'll be following during the
+workshop. Please bring the outline along at the very least.
+
+INSTALLING ANACONDA
+-------------------
+
+You'll need to install the Miniconda distribution beforehand. Why? Because it
+will probably take time to do during the workshop. If you'd like to know what
+Miniconda is, check Section 0 in the outline.
+
+1. Visit the Downloads page for Miniconda: http://conda.pydata.org/miniconda.html#miniconda
+
+2. Select the appropriate version for your OS and download it.
+
+3. To install, run the installer, and follow the instructions on-screen.
+
+4. To verify that it has been installed sucessfully, open a Command Prompt
+(Run > cmd) and type "python --version" without the quotation marks. You
+should see a message similar to this: "Python 3.3.5 :: Continuum Analytics, Inc.".
+
+5. In the Command Prompt, type "conda install ipython pyzmq jinja2 tornado". We will need
+these packages to run IPython during the workshop.
+
+HELP
+----
+
+If you face any problems during the installation, send me an email at
+cyph0nik@gmail.com. Please try to explain the problem in detail so I can help.
+
