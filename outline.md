@@ -85,7 +85,7 @@ You can find the IPython notebook [here](http://nbviewer.ipython.org/gist/Cyph0n
 
 Miniconda is a custom installer for Python that simplifies the installation of Python libraries. It is available for all major operating systems and works pretty much the same across them all, making troubleshooting less of a problem.
 
-To download Miniconda, visit its [Downloads](http://conda.pydata.org/miniconda.html#miniconda) page. Select the version corresponding to your operating system. The installation process is quite straightforward. Do not change any of the options during the installation, except perhaps the installation directory.
+To download Miniconda, visit its [Downloads](http://conda.pydata.org/miniconda.html#miniconda) page. Select the **Python 3** version corresponding to your operating system. The installation process is quite straightforward. Do not change any of the options during the installation, except perhaps the installation directory.
 
 To verify that Python was installed correctly, type `python --version` in the command prompt on Windows or the terminal on OS X/Linux. If you don't get an error, you're good to go.
 

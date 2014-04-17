@@ -13,13 +13,13 @@ Miniconda is, check Section 0 in the outline.
 
 1. Visit the Downloads page for Miniconda: http://conda.pydata.org/miniconda.html#miniconda
 
-2. Select the appropriate version for your OS and download it.
+2. Select the appropriate Python 3 version for your OS and download it.
 
 3. To install, run the installer, and follow the instructions on-screen.
 
 4. To verify that it has been installed sucessfully, open a Command Prompt
 (Run > cmd) and type "python --version" without the quotation marks. You
-should see a message similar to this: "Python 3.3.5 :: Continuum Analytics, Inc.".
+should see a message quite similar to this: "Python 3.3.5 :: Continuum Analytics, Inc.".
 
 5. In the Command Prompt, type "conda install ipython pyzmq jinja2 tornado". We will need
 these packages to run IPython during the workshop.
